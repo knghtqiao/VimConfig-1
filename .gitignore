@@ -1,0 +1,6 @@
+# Ignore the tags file in bundle
+/bundle/snipmate/doc/tags
+/bundle/the-nerd-tree/doc/tags
+
+
+
