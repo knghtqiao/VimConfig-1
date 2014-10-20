@@ -17,3 +17,5 @@ nnoremap <leader>v <Plug>TaskList
 " Syntax Highlight
 syntax on
 
+" Test: add a command- :Status
+command! Status echo "All systems are go!"
