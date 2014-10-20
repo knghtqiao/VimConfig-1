@@ -1,4 +1,5 @@
 " Config for Vim pathogen plugin to manage other plugins 
+" Make sure they are at the top of this file
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
