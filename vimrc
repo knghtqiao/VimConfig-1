@@ -4,6 +4,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Common Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 放在syntax on之后，会使语法高亮失效，所以将其位置提前
+filetype off
 " Test: add a command- :Status
 command! Status echo "All systems are go!"
 
@@ -68,8 +70,9 @@ colorscheme slate
 " Plugin Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 当执行pathogen任务时, Filetype detection 必须设为off. 
-" 确保 \"filetype off\" 位置在the pathogen's commands之前
-filetype off
+" 但是将其放在这里的话，会使语法高亮失效
+" 所以要把 \"filetype off\" 放在该文件的最前面
+" filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
