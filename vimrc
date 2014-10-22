@@ -64,7 +64,8 @@ syntax on  "syn on
 " 背景设为黑色
 set background=dark
 " 设置配色方案
-colorscheme slate
+"colorscheme slate
+colorscheme desert
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings
