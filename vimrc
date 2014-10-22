@@ -95,3 +95,13 @@ colorscheme desert
     "设置关闭和打开taglist窗口的快捷键
     nnoremap <leader>tl : Tlist<CR>
 "}
+
+"winmanager{
+    " 将TagList窗口和netrw窗口整合起来
+    let g:winManagerWindowLayout='FileExplorer|TagList'
+    " 进入vim时自动打开winmanager
+    " NOTE: 这条命令要配合修改 winmanager.vim文件
+    let g:AutoOpenWinManager = 1
+    "WMToggle的快捷键
+    nnoremap <leader>wm :WMToggle<CR>
+"}
