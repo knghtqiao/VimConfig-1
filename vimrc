@@ -64,22 +64,34 @@ syntax on  "syn on
 " 背景设为黑色
 set background=dark
 " 设置配色方案
-"colorscheme slate
+" colorscheme slate
 colorscheme desert
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 当执行pathogen任务时, Filetype detection 必须设为off. 
-" 但是将其放在这里的话，会使语法高亮失效
-" 所以要把 \"filetype off\" 放在该文件的最前面
-" filetype off
-call pathogen#infect()
-call pathogen#helptags()
+"pathogen{
+    " 当执行pathogen任务时, Filetype detection 必须设为off. 
+    " 但是将其放在这里的话，会使语法高亮失效
+    " 所以要把 \"filetype off\" 放在该文件的最前面
+    " filetype off
+    call pathogen#infect()
+    call pathogen#helptags()
+    
+    " 定制mapping. 解决the error when use vim:
+    " Error detected while processing /home/maxime/.vim/bundle/tasklist/plugin/tasklist.vim
+    nnoremap <leader>v <Plug>TaskList
+"}
 
-" 定制mapping. 解决the error when use vim:
-" Error detected while processing /home/maxime/.vim/bundle/tasklist/plugin/tasklist.vim
-nnoremap <leader>v <Plug>TaskList
-
-
-
+"taglist{
+    " 只显示当前文件的taglist，默认是显示多个
+    let Tlist_Show_One_File = 1
+    " 如果taglist是最后一个窗口，则退出vim
+    let Tlist_Exit_OnlyWindow = 1
+    " 在右侧窗口中显示taglist
+    let Tlist_Use_Right_Window = 1
+    " 打开taglist时，光标保留在taglist窗口
+    let Tlist_GainFocus_On_ToggleOpen = 1
+    "设置关闭和打开taglist窗口的快捷键
+    nnoremap <leader>tl : Tlist<CR>
+"}

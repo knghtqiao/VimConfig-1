@@ -45,3 +45,6 @@
 	path = bundle/the-nerd-tree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
 	ignore = dirty
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
